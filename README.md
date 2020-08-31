@@ -31,11 +31,17 @@ Installation: http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/getting_
 
 We used the follwoing python packages (not necessarily at this order, we may have used more packacjes): 
 rospy
+
 roslib
+
 requests 
+
 moveit_commander
+
 baxter_interface
+
 cv2 
+
 scipy 
 
 
