@@ -46,6 +46,40 @@ We used the follwoing python packages (not necessarily at this order, we may hav
 * cv2 
 * scipy 
 
+## How to run the project:
+
+Into a terminal on ubuntu enter the following command: 
+
+`$ ./baxter.sh sim` (after changing directory) 
+
+`$ roslaunch baxter_gazebo baxter_world.launch`
+
+open a new terminal and run: 
+
+`$ rosrun baxter_tools enable_robot.py -e`
+
+`$ rosrun baxter_tools camera_control.py -o head_camera -r 1280x800`
+
+`$ rosrun baxter_interface joint_trajectory_action_server.py`
+
+open another terminal and run: 
+
+`$ roslaunch baxter_moveit_config baxter_grippers.launch`
+
+then run the wanted nodes in another termianl with the command: 
+
+`$ rosrun <package name> <script name>
+
+##### In case of any error, first try to run the project again. If the script already load models into gazebo (table, blocks) first delete them manually from Gazebo. 
 
 
+## Team:
+
+Yuval Snir 
+Matan Kleinr 
+under the guidance of Ronen Nir
+
+***
+
+In the wiki of thie repo there is a lot of links and information we accumulate during the work on this project. 
 
