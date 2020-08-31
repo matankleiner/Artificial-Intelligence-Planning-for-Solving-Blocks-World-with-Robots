@@ -10,9 +10,7 @@ In this project first we create a world, made of a table and four blocks in diff
 
 Then, we Sense the world using Baxter's head camera and conclude the Initial State (the order of the blocks). 
 
-Afterwards we Think. We do it by creating and solving a planning problem using PDDL. The plannign problem solution is a plan to move the blocks from the given Initial State to a 
-
-Goal State chosen by the user. 
+Afterwards we Think. We do it by creating and solving a planning problem using PDDL. The plannign problem solution is a plan to move the blocks from the given Initial State to a Goal State chosen by the user. 
 
 Then we Act, using Moveit and Baxter and reached the wanted Goal State. 
 
