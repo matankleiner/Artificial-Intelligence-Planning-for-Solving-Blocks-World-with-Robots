@@ -77,7 +77,7 @@ then run the wanted nodes in another termianl with the command:
 
 Yuval Snir 
 
-Matan Kleinr 
+Matan Kleiner 
 
 under the guidance of Ronen Nir
 
