@@ -70,7 +70,9 @@ then run the wanted nodes in another termianl with the command:
 
 `$ rosrun <package name> <script name>`
 
-##### In case of any error, first try to run the project again. If the script already load models into gazebo (table, blocks) first delete them manually from Gazebo. 
+##### In case of any error, first try to run the project again.
+
+##### If the script already load models into gazebo (table, blocks) first delete them manually from Gazebo. 
 
 
 ## Team:
