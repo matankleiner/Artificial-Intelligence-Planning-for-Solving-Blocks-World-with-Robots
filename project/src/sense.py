@@ -241,6 +241,8 @@ def shutdown():
         delete_gazebo_models()
         print("Shutting down safely")
 
+# -------------------------------------------- MAIN --------------------------------------------
+
 def main(args):
     load_gazebo_models()
     i2initialState = image_to_initial_state()
