@@ -1,0 +1,3 @@
+(move red_cube position1 position5)
+(move blue_cube position2 position1)
+(move red_cube position5 position2)
