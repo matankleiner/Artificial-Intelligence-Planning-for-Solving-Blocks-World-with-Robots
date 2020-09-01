@@ -68,6 +68,8 @@ then run the wanted nodes in another termianl with the command:
 
 `$ rosrun <package name> <script name>`
 
+you should run the `think_and_act.py` script from the PDDL directory.
+
 ##### In case of any error, first try to run the project again.
 
 ##### If the script already load models into gazebo (table, blocks) first delete them manually from Gazebo. 
