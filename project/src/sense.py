@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-from __future__ import print_function
 
-#import colorsys
-#import json
-#import numpy
+# this part is the SENSE part. in this part we will create the world in Gazebo and than take pictures of it using BAXTER's head camera. we will use 
+# image processing methods to deduct the initial state and than we will publish it to the THINK AND ACT part. 
+# in order to do image processing we will import the OpenCV library. 
+
+from __future__ import print_function
 
 import roslib
 roslib.load_manifest('think_and_act')
@@ -19,6 +20,8 @@ from enum import Enum
 from scipy import ndimage # import scipy library for center of mass calculation
 from gazebo_msgs.srv import SpawnModel, DeleteModel
 from geometry_msgs.msg import PoseStamped, Pose, Point, Quaternion
+
+# -------------------------------------- DEFINES ---------------------------------------------
 
 # blocks [x,y,z] location, used in load_gazebo_models and in picknplace: (including position 5)
 GOAL_X_DELTA = 0.15
@@ -128,7 +131,7 @@ def delete_gazebo_models():
         except rospy.ServiceException, e:
             rospy.logerr("Spawn URDF service call failed: {0}".format(e))
 
-# ----------------------------------------------------------------------------------------------------------
+# ---------------------------------------IMAGE PROCESSING---------------------------------------------
 
 class image_to_initial_state:
     received_image = [None]
