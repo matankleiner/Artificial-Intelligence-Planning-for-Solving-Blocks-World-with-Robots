@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+# this part is the THINK and ACT part. first we subscribe to the SENSE part to recieve the inital state. we get the goal state from the user. then we will solve 
+# a plannig problem of getting from the initial state to the goal state using PDDL format. when we will get the solution we will order BAXTER's to move the cubes 
+# in the correct way, from the intial state to the goal state. 
+
 # to use the Python MoveIt interfaces, we will import the `moveit_commander`_ namespace.
 # this namespace provides us with a `MoveGroupCommander`_ class, a `PlanningSceneInterface`_ class,
 # and a `RobotCommander`_ class. we also import `rospy`_ and some messages that we will use.
@@ -108,7 +112,7 @@ def callback(data):
             		change = 1
     	# create and solve a planning problem using PDDL
     	if (change):
-        	PDDL_planner_n_solver(initialState, goalState)
+        	planner(initialState, goalState)
 		solver()
     		picknplace()
 
@@ -131,10 +135,10 @@ def cubes_goal_order():
         goal_cubes_order[i] = goal_cubes_order[i].lower()
     return goal_cubes_order
 
-## @brief create and solve a PDDL problem
+## @brief create a PDDL problem
 ## @param initialState a list of the cubes initial state
 ## @param goalState a list of the cubes goal state
-def PDDL_planner_n_solver(initialState, goalState):
+def planner(initialState, goalState):
     # create a problem.pddl file based on the initial state and the goal state
     file = open("problem.pddl", "w")
     file.write("(define (problem order_blocksworld)\n\
@@ -162,6 +166,7 @@ def PDDL_planner_n_solver(initialState, goalState):
     file.write(")")
     file.close
 
+## @brief solve a PDDL problem
 def solver():
 	data = {'domain': open('domain.pddl', 'r').read(),'problem': open('problem.pddl', 'r').read()}
 	resp = requests.post('http://solver.planning.domains/solve',verify=False, json=data).json()
