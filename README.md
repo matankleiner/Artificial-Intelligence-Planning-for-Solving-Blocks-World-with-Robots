@@ -83,6 +83,12 @@ Matan Kleiner
 
 under the guidance of Ronen Nir
 
+## Project's Video: 
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=US_xKeu5Bwk
+" target="_blank"><img src="http://img.youtube.com/vi/US_xKeu5Bwk/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 ***
 
 In the wiki of thie repo there is a lot of links and information we accumulate during the work on this project. 
