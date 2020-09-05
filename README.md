@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-This is a universty project which use Baxter robot to solve Blocks World problem using Sense Think Act methodology. 
+This is a universty project which use Baxter robot to solve a Blocks World problem using Sense Think Act methodology. 
 
 The project run only as a simulation on Gazebo. 
 
