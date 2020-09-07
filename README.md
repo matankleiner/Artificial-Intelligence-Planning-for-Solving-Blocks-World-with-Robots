@@ -87,8 +87,19 @@ under the guidance of Ronen Nir
 
 ## Project's Video: 
 
+Video summing the project: 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=US_xKeu5Bwk
 " target="_blank"><img src="http://img.youtube.com/vi/US_xKeu5Bwk/0.jpg" 
+alt="project's video" width="240" height="180" border="10" /></a>
+
+Changing the order of all the blocks: 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ejzN4vBFjZA
+" target="_blank"><img src="http://img.youtube.com/vi/ejzN4vBFjZA/0.jpg" 
+alt="project's video" width="240" height="180" border="10" /></a>
+
+Switching the red and blue blocks' location:
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=U9Tuuu8TSTA
+" target="_blank"><img src="http://img.youtube.com/vi/U9Tuuu8TSTA/0.jpg" 
 alt="project's video" width="240" height="180" border="10" /></a>
 
 ***
