@@ -64,11 +64,11 @@ open another terminal and run:
 
 `$ roslaunch baxter_moveit_config baxter_grippers.launch`
 
-then run the wanted nodes in another termianl with the command: 
+then run the wanted nodes in another terminal with the command: 
 
 `$ rosrun <package name> <script name>`
 
-first run the `sense.py` node, than the `think_and_act.py` node.  
+first run the `sense.py` node, then the `think_and_act.py` node.  
 
 you should run the `think_and_act.py` script from the PDDL directory.
 
