@@ -59,7 +59,7 @@ We used the follwoing external python packages (not necessarily at this order, w
 
 Into a terminal on ubuntu enter the following command: 
 
-`$ ./baxter.sh sim` (after changing directory) 
+`$ ./baxter.sh sim` (make sure you are in the directory where baxter.sh file is) 
 
 `$ roslaunch baxter_gazebo baxter_world.launch`
 
@@ -81,7 +81,7 @@ then run the wanted nodes in another terminal with the command:
 
 first run the `sense.py` node, then the `think_and_act.py` node.  
 
-you should run the `think_and_act.py` script from the PDDL directory.
+You should run the `think_and_act.py` script from the PDDL directory.
 
 ##### In case of any error, first try to run the project again.
 
