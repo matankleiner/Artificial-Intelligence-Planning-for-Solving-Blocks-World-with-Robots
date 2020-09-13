@@ -63,7 +63,7 @@ Into a terminal on ubuntu enter the following command:
 
 `$ roslaunch baxter_gazebo baxter_world.launch`
 
-open a new terminal and run: 
+Open a new terminal and run: 
 
 `$ rosrun baxter_tools enable_robot.py -e`
 
@@ -71,15 +71,15 @@ open a new terminal and run:
 
 `$ rosrun baxter_interface joint_trajectory_action_server.py`
 
-open another terminal and run: 
+Open another terminal and run: 
 
 `$ roslaunch baxter_moveit_config baxter_grippers.launch`
 
-then run the wanted nodes in another terminal with the command: 
+Then run the wanted nodes in another terminal with the command: 
 
 `$ rosrun <package name> <script name>`
 
-first run the `sense.py` node, then the `think_and_act.py` node.  
+First run the `sense.py` node, then the `think_and_act.py` node.  
 
 You should run the `think_and_act.py` script from the PDDL directory.
 
