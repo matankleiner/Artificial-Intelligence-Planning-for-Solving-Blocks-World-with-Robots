@@ -34,15 +34,26 @@ MoveIt is an open source robotics manipulation platform. We used it features mai
 
 Installation: http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/getting_started/getting_started.html
 
-We used the follwoing python packages (not necessarily at this order, we may have used more packages): 
+We used the follwoing external python packages (not necessarily at this order, we may have used more packages): 
 
 * rospy
 * roslib
-* requests 
+* roscpp
+* rospack
+* gazebo_msgs
+* gazebo_ros
+* sensor_msgs
+* std_msgs
+* visualization_msgs
 * moveit_commander
+* baxter_core_msgs
 * baxter_interface
+* baxter_gazebo
+* baxter_tools
 * cv2 
-* scipy 
+* cv_bridge
+* scipy
+* requests 
 
 ## How to run the project:
 
