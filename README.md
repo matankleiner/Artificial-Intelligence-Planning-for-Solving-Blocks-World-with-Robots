@@ -83,7 +83,7 @@ Then run the wanted nodes in another terminal with the command:
 
 `$ rosrun <package name> <script name>`
 
-First run the `sense.py` node, then the `think_and_act.py` node.  
+First run the `sense.py` node, then the `think_and_act.py` node, each one in a different terminal.  
 
 You should run the `think_and_act.py` script from the PDDL directory.
 
