@@ -69,6 +69,10 @@ Open a new terminal and run:
 
 `$ rosrun baxter_tools camera_control.py -o head_camera -r 1280x800`
 
+`$ rosrun image_view image_view image:=/cameras/head_camera/image`
+
+Open another terminal and run: 
+
 `$ rosrun baxter_interface joint_trajectory_action_server.py`
 
 Open another terminal and run: 
