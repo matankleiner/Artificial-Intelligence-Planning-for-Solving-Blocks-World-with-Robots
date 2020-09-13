@@ -1,27 +1,29 @@
 #!/usr/bin/env python
 
-# this part is the SENSE part. in this part we will create the world in Gazebo and than take pictures of it using BAXTER's head camera. we will use 
-# image processing methods to deduct the initial state and than we will publish it to the THINK AND ACT part. 
-# in order to do image processing we will import the OpenCV library. 
+# This part is the SENSE part. In this part we will create the world in Gazebo and than take pictures of it using BAXTER's head camera.
+# We will use image processing methods to deduct the initial state and then we will publish it to the THINK AND ACT part.
+# In order to do image processing we will import the OpenCV library.
 
 from __future__ import print_function
 
 import roslib
+
 roslib.load_manifest('think_and_act')
 import sys
 import rospy
 import rospkg
-import cv2 # openCV for image processing 
+import cv2  # openCV for image processing
 # messeges for subscribing and publishing
-from std_msgs.msg import String 
+from std_msgs.msg import String
 from sensor_msgs.msg import Image
-from cv_bridge import CvBridge, CvBridgeError # cv_bridge bridges the gap between ros msgs and openCV
+from cv_bridge import CvBridge, CvBridgeError  # cv_bridge bridges the gap between ros msgs and openCV
 from enum import Enum
-from scipy import ndimage # import scipy library for center of mass calculation
+from scipy import ndimage  # import scipy library for center of mass calculation
 from gazebo_msgs.srv import SpawnModel, DeleteModel
 from geometry_msgs.msg import PoseStamped, Pose, Point, Quaternion
 
 # -------------------------------------- DEFINES ---------------------------------------------
+# position of the table and the blocks in the world
 
 # blocks [x,y,z] location, used in load_gazebo_models and in picknplace: (including position 5)
 GOAL_X_DELTA = 0.15
@@ -29,13 +31,6 @@ BLOCKS = [[0.55, -0.3, -0.135], [0.55, -0.2, -0.135], [0.55, -0.1, -0.135], [0.5
           [0.55 + GOAL_X_DELTA, -0.15, -0.135]]
 # table [x, y, z] location, used in load_gazebo_models:
 TABLE = [0.7, 0.0, 0.0]
-# table size [x, y, z] dimension, used in picknplace:
-TABLE_SIZE = [1.0, 0.929999123509, 0.75580154342]
-# block size [x, y, z] dimension, used in picknplace:
-BLOCK_SIZE = [0.02, 0.02, 0.02]
-# center [x, y, z] dimension, used in picknplace:
-CENTER = [0.6, -0.0441882472378, -0.52509922829]
-
 
 # -------------------------------------- GAZEBO MODELS --------------------------------------------
 
@@ -110,7 +105,6 @@ def load_gazebo_models(table_pose=Pose(position=Point(x=TABLE[0], y=TABLE[1], z=
     except rospy.ServiceException, e:
         rospy.logerr("Spawn URDF service call failed: {0}".format(e))
 
-
 ## @brief delete the gazebo models from world. will be called when shutdown has occurred
 def delete_gazebo_models():
     print("--------------->shutdown function is called<---------------")  # print to a terminal
@@ -130,6 +124,7 @@ def delete_gazebo_models():
             resp_delete = delete_model(i)
         except rospy.ServiceException, e:
             rospy.logerr("Spawn URDF service call failed: {0}".format(e))
+
 
 # ---------------------------------------IMAGE PROCESSING---------------------------------------------
 
@@ -176,7 +171,7 @@ class image_to_initial_state:
             # splits the image to h, s, v where v is a gray scale image
             (h, s, v) = cv2.split(hsv)
             # turns all the pixels that greater than 600 in y axis to black (WORK FOR HEAD CAMERA!!!)
-            v[540:][:] = 1
+            v[600:][:] = 1
             # merges the three matrices back to hsv format
             hsv_no_red = cv2.merge((h, s, v))
             # filters according to the HSV values
@@ -205,46 +200,44 @@ class image_to_initial_state:
         yellow_mask = self.image_processing(self.Color.Yellow)
         (self.Cubes_center_of_mass[self.Color.Yellow.value][1],
          self.Cubes_center_of_mass[self.Color.Yellow.value][0]) = ndimage.measurements.center_of_mass(yellow_mask)
-        
 
     ## @brief calculate the initial state from the center of mass and publish it
     def display_initial_state(self):
-        self.masked_image()
-	center_of_mass = self.Cubes_center_of_mass
         x_center_of_mass = []
         sorted_x_center_of_mass = []
-        for i in range(0,4):
-            x_center_of_mass.append(int(center_of_mass[i][0]))
-	    sorted_x_center_of_mass.append(int(center_of_mass[i][0]))
-        sorted_x_center_of_mass.sort()
         initial_state = []
         colors = ["red", "blue", "green", "yellow"]
+        # deduct the initial state using the center of mass x values 
+        self.masked_image()
+        center_of_mass = self.Cubes_center_of_mass
+        for i in range(0, 4):
+            x_center_of_mass.append(int(center_of_mass[i][0]))
+            sorted_x_center_of_mass.append(int(center_of_mass[i][0]))
+        sorted_x_center_of_mass.sort()
         for i in sorted_x_center_of_mass:
             initial_state.append(colors[x_center_of_mass.index(i)])
-	initial_state.reverse()
-	str_to_publish = ""
+        initial_state.reverse()
+        # turn the list into a string in order to publish
+        str_to_publish = ""
         for i in initial_state:
-		str_to_publish = str_to_publish + i + " "
+            str_to_publish = str_to_publish + i + " "
         print(str_to_publish)
         rate = rospy.Rate(1)
         while not rospy.is_shutdown():
-            rospy.loginfo(str_to_publish)
+            rospy.loginfo(str_to_publish) # publish info in the terminal
             self.initial_state_pub.publish(str_to_publish)
             rate.sleep()
 
     ## @brief safe shutdown
     def shutdown(self):
         print("Shutting down safely")
-	delete_gazebo_models()
-
-def shutdown():
         delete_gazebo_models()
-        print("Shutting down safely")
 
 # -------------------------------------------- MAIN --------------------------------------------
 
 def main(args):
     load_gazebo_models()
+    rospy.sleep(4) # sleep untill all models have been loaded 
     i2initialState = image_to_initial_state()
     # we use "disable_signals" because ROS and OpenCV  try to control the same signals,
     # so it's necessary to disable it on ROS to avoid conflicts.
@@ -253,12 +246,13 @@ def main(args):
     i2initialState.display_initial_state()
 
     try:
-   	rospy.spin()
+        rospy.spin()
     except KeyboardInterrupt:
         print("Keyboard Interrupt was detected")
 
     # safe shutdown
     rospy.on_shutdown(i2initialState.shutdown)
+
 
 if __name__ == '__main__':
     main(sys.argv)
