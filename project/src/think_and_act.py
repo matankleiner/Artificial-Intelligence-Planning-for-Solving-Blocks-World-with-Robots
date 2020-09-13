@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-# this part is the THINK and ACT part. first we subscribe to the SENSE part to recieve the inital state. we get the goal state from the user. then we will solve 
-# a plannig problem of getting from the initial state to the goal state using PDDL format. when we will get the solution we will order BAXTER's to move the cubes 
+# This part is the THINK and ACT part. First we subscribe to the SENSE part to recieve the inital state, we get the goal state from the user. Then we will solve 
+# a plannig problem of getting from the initial state to the goal state using PDDL format. When we will get the solution we will order BAXTER's joints to move the blocks 
 # in the correct way, from the intial state to the goal state. 
 
 # to use the Python MoveIt interfaces, we will import the `moveit_commander`_ namespace.
