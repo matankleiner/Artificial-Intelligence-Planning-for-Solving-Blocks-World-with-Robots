@@ -114,6 +114,12 @@ Changing the order of all the blocks:
 " target="_blank"><img src="http://img.youtube.com/vi/ejzN4vBFjZA/0.jpg" 
 alt="project's video" width="240" height="180" border="10" /></a>
 
+Switching the location of each pair of blocks:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Jw--K7xer00
+" target="_blank"><img src="http://img.youtube.com/vi/Jw--K7xer00/0.jpg" 
+alt="project's video" width="240" height="180" border="10" /></a>
+
 Switching the red and blue blocks' location:
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=U9Tuuu8TSTA
