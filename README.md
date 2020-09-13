@@ -1,4 +1,4 @@
-# Blocks-World
+# Artificial Intelligence Planning for Solving Blocks World with Robots 
 
 ## Introduction:
 
