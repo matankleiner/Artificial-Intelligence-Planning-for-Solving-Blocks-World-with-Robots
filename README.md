@@ -1,6 +1,6 @@
 # Artificial Intelligence Planning for Solving Blocks World with Robots 
 
-https://img.shields.io/badge/language-python-blue
+(https://img.shields.io/badge/language-python-blue)
 
 ## Introduction:
 
