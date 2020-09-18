@@ -1,5 +1,7 @@
 # Artificial Intelligence Planning for Solving Blocks World with Robots 
 
+https://img.shields.io/badge/language-python-blue
+
 ## Introduction:
 
 This is a universty project which use Baxter robot to solve a Blocks World problem using Sense Think Act methodology. 
