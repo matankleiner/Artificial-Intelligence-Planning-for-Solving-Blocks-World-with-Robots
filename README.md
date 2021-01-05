@@ -142,5 +142,5 @@ alt="project's video" width="360" height="240" border="10" /></a>
 
 ***
 
-In the wiki of thie repo there is a lot of links and information we accumulate during the work on this project. 
+In the [wiki](https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/wiki) of thie repo there is a lot of links and information we accumulate during the work on this project. 
 
