@@ -38,6 +38,8 @@ Gazebo is an open-source 3D robotics simulator which using ODE physics engine, O
 
 Baxter simulation for Gazebo: https://sdk.rethinkrobotics.com/wiki/Simulator_Installation
 
+![alt text](https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/Gazebo.png)
+
 #### [MoveIt](https://moveit.ros.org/)
 
 MoveIt is an open source robotics manipulation platform. We used it features mainly through python code and [Rviz](http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html). 
