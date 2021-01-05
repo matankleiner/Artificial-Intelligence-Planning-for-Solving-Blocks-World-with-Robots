@@ -46,6 +46,8 @@ MoveIt is an open source robotics manipulation platform. We used it features mai
 
 Installation: http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/getting_started/getting_started.html
 
+![alt text](https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/Rviz.png)
+
 We used the follwoing external python packages (not necessarily at this order, we may have used more packages): 
 
 * rospy
