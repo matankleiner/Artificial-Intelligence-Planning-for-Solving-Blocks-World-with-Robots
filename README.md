@@ -1,6 +1,6 @@
 # Artificial Intelligence Planning for Solving Blocks World with Robots 
 
-<img src="https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/vlcsnap-2020-09-07-15h46m08s601.png" data-canonical-src="https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/vlcsnap-2020-09-07-15h46m08s601.png" width="800" height="600" />
+<img src="https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/vlcsnap-2020-09-07-15h46m08s601.png" data-canonical-src="https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/vlcsnap-2020-09-07-15h46m08s601.png" width="1200" height="500" />
 
 [![shield](https://img.shields.io/badge/ros-kinetic-yellow)](http://wiki.ros.org/kinetic)
 [![shield](https://img.shields.io/badge/language-python-blue)](https://www.python.org/)
