@@ -22,6 +22,8 @@ Afterwards we Think. We do it by creating and solving a planning problem using P
 
 Then we Act, using Moveit and Baxter and reached the wanted Goal State. 
 
+![alt text](https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/sense%20think%20act%20diagram.png)
+
 ## Requirements: 
 
 We wrote and ran this project on Ubuntu 16 using [ROS kinetic](http://wiki.ros.org/kinetic/Installation). 
