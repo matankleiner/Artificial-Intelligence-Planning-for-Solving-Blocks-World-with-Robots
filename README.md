@@ -1,12 +1,12 @@
 # Artificial Intelligence Planning for Solving Blocks World with Robots 
 
-![alt text](https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/vlcsnap-2020-09-07-15h46m08s601.png)
-
 [![shield](https://img.shields.io/badge/ros-kinetic-yellow)](http://wiki.ros.org/kinetic)
 [![shield](https://img.shields.io/badge/language-python-blue)](https://www.python.org/)
 [![shield](https://img.shields.io/badge/module-rospy-green)](http://wiki.ros.org/rospy)
 [![shield](https://img.shields.io/badge/module-cv2-green)](https://opencv.org/)
 [![shield](https://img.shields.io/badge/module-moveit-green)](http://wiki.ros.org/moveit)
+
+![alt text](https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/vlcsnap-2020-09-07-15h46m08s601.png)
 
 ## Introduction:
 
