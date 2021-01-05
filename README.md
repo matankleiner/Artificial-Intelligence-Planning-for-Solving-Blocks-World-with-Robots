@@ -10,17 +10,17 @@
 
 ## Introduction:
 
-This is a universty project which use Baxter robot to solve a Blocks World problem using Sense Think Act methodology. 
+This is a universty project which use Baxter robot to solve a Blocks World problem using **Sense Think Act** methodology. 
 
 The project run only as a simulation on Gazebo. 
 
 In this project first we create a world, made of a table and four blocks in different colors using Gazebo simulation. 
 
-Then, we Sense the world using Baxter's head camera and conclude the Initial State (the order of the blocks). 
+Then, we **Sense** the world using Baxter's head camera and conclude the Initial State (the order of the blocks). 
 
-Afterwards we Think. We do it by creating and solving a planning problem using PDDL. The plannign problem solution is a plan to move the blocks from the given Initial State to a Goal State chosen by the user. 
+Afterwards we **Think**. We do it by creating and solving a planning problem using PDDL. The plannign problem solution is a plan to move the blocks from the given Initial State to a Goal State chosen by the user. 
 
-Then we Act, using Moveit and Baxter and reached the wanted Goal State. 
+Then we **Act**, using Moveit and Baxter and reached the wanted Goal State. 
 
 ![alt text](https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/sense%20think%20act%20diagram.png)
 
