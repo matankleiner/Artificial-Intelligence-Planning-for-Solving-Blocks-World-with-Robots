@@ -1,4 +1,4 @@
-# Artificial Intelligence Planning for Solving Blocks World with Robots ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+# Artificial Intelligence Planning for Solving Blocks World with Robots 
 
 [![shield](https://img.shields.io/badge/ros-kinetic-yellow)](http://wiki.ros.org/kinetic)
 [![shield](https://img.shields.io/badge/language-python-blue)](https://www.python.org/)
