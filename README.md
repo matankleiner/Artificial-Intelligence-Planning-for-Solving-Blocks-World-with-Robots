@@ -112,7 +112,7 @@ Yuval Snir
 
 Matan Kleiner 
 
-under the guidance of Ronen Nir
+Supervised by Ronen Nir
 
 ## Project's Video: 
 
