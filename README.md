@@ -13,7 +13,7 @@
   * [Requirements](#Requirements)
   * [How to run the project](#How-to-run-the-project)
   * [Team](#Team)
-  * [Project's Video](#Project's-Video)
+  * [Project's Video](#Projects-Video)
 
 ## Introduction:
 
