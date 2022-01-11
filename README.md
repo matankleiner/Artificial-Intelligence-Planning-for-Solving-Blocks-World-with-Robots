@@ -11,9 +11,9 @@
 - [Artificial Intelligence Planning for Solving Blocks World with Robots ](#Artificial Intelligence Planning for Solving Blocks World with Robots )
   * [Introduction](#Introduction)
   * [Requirements](#Requirements)
-  * [How to run the project](#How to run the project)
+  * [How to run the project](#How_to_run_the_project)
   * [Team](#Team)
-  * [Project's Video](#Project's Video)
+  * [Project's Video](#Project's_Video)
 
 ## Introduction:
 
