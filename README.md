@@ -8,6 +8,13 @@
 
 ![alt text](https://github.com/matankleiner/Artificial-Intelligence-Planning-for-Solving-Blocks-World-with-Robots/blob/master/images/vlcsnap-2020-09-07-15h46m08s601.png)
 
+- [Artificial Intelligence Planning for Solving Blocks World with Robots ](#Artificial Intelligence Planning for Solving Blocks World with Robots )
+  * [Introduction](#Introduction)
+  * [Requirements](#Requirements)
+  * [How to run the project](#How to run the project)
+  * [Team](#Team)
+  * [Project's Video](#Project's Video)
+
 ## Introduction:
 
 This is a university project which use Baxter robot to solve a Blocks World problem using **Sense Think Act** methodology. 
